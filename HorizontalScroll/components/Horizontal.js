@@ -13,17 +13,19 @@ import {
 export default class Horizontal extends Component {
   render() {
     return (
-      <ScrollView horizontal={true} style={styles.container}>
+      <ScrollView 
+      horizontal={true} 
+      pagingEnabled={true} 
+      style={styles.container}>
           <View style={styles.outer}>
             <Text style={styles.innerText}>Hello</Text>            
           </View>
-          <View style={styles.outer}>
+          <View style={[styles.outer, styles.red]}>
             <Text style={styles.innerText}>My Name is </Text>            
           </View>
-          <View style={styles.outer}>
+          <View style={[styles.outer, styles.green]}>
             <Text style={styles.innerText}>Tushar Gupta</Text>            
-          </View>
-               
+          </View>               
       </ScrollView>
     );
   }
@@ -44,6 +46,12 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 23,
     fontWeight: 'bold',
+  },
+  red:{
+    backgroundColor: '#ff3300'
+  },
+  green:{
+    backgroundColor: '#00ff99'
   }
   
 });
