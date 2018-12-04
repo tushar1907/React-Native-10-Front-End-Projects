@@ -18,10 +18,10 @@ export default class Horizontal extends Component {
             <Text style={styles.innerText}>Hello</Text>            
           </View>
           <View style={styles.outer}>
-            <Text style={styles.innerText}>Hello</Text>            
+            <Text style={styles.innerText}>My Name is </Text>            
           </View>
           <View style={styles.outer}>
-            <Text style={styles.innerText}>Hello</Text>            
+            <Text style={styles.innerText}>Tushar Gupta</Text>            
           </View>
                
       </ScrollView>
