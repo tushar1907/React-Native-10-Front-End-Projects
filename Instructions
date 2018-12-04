@@ -1,0 +1,17 @@
+C:\Users\tusha\AppData\Local\Android\Sdk\emulator
+
+emulator -avd Pixel_2_XL_API_26 -netdelay none -netspeed full
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+
+
+----------------------------------------------------------------
+
+npm install -g create-react-native-app
+
+react-native init ToDoList
+
+cd ToDoList
+
+react-native run-android
