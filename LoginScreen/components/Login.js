@@ -1,12 +1,13 @@
 
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, Image, Dimensions} from 'react-native';
+import {StyleSheet, Text, View, Image, Dimensions, KeyboardAvoidingView} from 'react-native';
 import MyForm from './MyForm'
 
 export default class Login extends Component {
   render() {
     return (
-      <View style={styles.container}>
+      <KeyboardAvoidingView behavior="padding" style={styles.container}>
+
         <View style={styles.logocontainer}>
         <Image 
         style={styles.logo} 
@@ -16,7 +17,8 @@ export default class Login extends Component {
         <View style={styles.myform}>
           <MyForm />
         </View>
-      </View>
+
+      </KeyboardAvoidingView>
     );
   }
 }
@@ -37,7 +39,8 @@ const styles = StyleSheet.create({
     width: 100,
   },
   title:{
-    color: '#fff'
+    color: '#fff',
+    marginTop: 10,
   },
   myform:{
       flex: 3

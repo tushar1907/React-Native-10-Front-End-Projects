@@ -38,10 +38,12 @@ const styles = StyleSheet.create({
     },
     buttonContainer:{
         backgroundColor: '#27ae60',   
+        paddingVertical: 15,        
     },
     buttonText: {
         textAlign: 'center',
         color: '#fff',
-        fontWeight: 'bold',
+        fontWeight: 'bold', 
+        
     }
   });
