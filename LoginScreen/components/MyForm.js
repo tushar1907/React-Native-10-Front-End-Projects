@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
-import t from 'tcomb-form-native';
+import { View, Text, TextInput, TouchableOpacity,StyleSheet } from 'react-native';
 
-const Form = t.form.Form;
-const User = t.struct({
-    email: t.String,
-    username: t.String,
-    password: t.String,
-    terms: t.Boolean
-  });
+
+
 export default class componentName extends Component {
   constructor(props) {
     super(props);
@@ -18,9 +12,36 @@ export default class componentName extends Component {
 
   render() {
     return (
-      <View>
-        <Form type={User} />
+      <View style={styles.container}>
+        <TextInput 
+        placeholder="Username"
+        style={styles.input}/>
+        <TextInput 
+        placeholder="Password"
+        style={styles.input}/>
+        <TouchableOpacity style={styles.buttonContainer}><Text style={styles.buttonText}>Login</Text></TouchableOpacity>
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,       
+      padding: 20  
+    },  
+    input:{
+      height: 40,
+      backgroundColor: 'rgba(255,255,255, 0.8)',
+      paddingLeft: 20,
+      marginBottom: 15,
+    },
+    buttonContainer:{
+        backgroundColor: '#27ae60',   
+    },
+    buttonText: {
+        textAlign: 'center',
+        color: '#fff',
+        fontWeight: 'bold',
+    }
+  });

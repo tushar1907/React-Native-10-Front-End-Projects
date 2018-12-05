@@ -24,7 +24,8 @@ export default class Login extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,    
-    backgroundColor: '#282530',
+    backgroundColor: '#282830',
+    width: Dimensions.get('window').width
   },
   logocontainer:{
     flexGrow: 2,         
