@@ -1,25 +1,27 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, Image } from 'react-native'
+import { Text, StyleSheet, View, ImageBackground, Dimensions } from 'react-native'
+import HeroText from './HeroText';
 
 export default class HeroImage extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Image 
+      
+        <ImageBackground 
             source={require('../images/img1.png')}
-            style={styles.img}/>
-      </View>
+            style={styles.img}>
+            <HeroText />
+        </ImageBackground>
+            
+     
     )
   }
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        
-    },
+    
     img:{
-        width: 200,
+        width: Dimensions.get('window').width,
         height: 200,
+        backgroundColor: '#ffff'
     }
 })

@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, Image } from 'react-native'
+import { Text, StyleSheet, View, ImageBackground } from 'react-native'
+import HeroText from './HeroText';
 
 export default class CompoImage extends Component {
   render() {
     return (
-        <Image 
+        <ImageBackground 
         source={this.props.imagesrc}
-        style={styles.img}/>
+        style={styles.img}>
+        <HeroText />
+        </ImageBackground>
     )
   }
 }

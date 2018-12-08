@@ -41,20 +41,20 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         flexWrap: 'wrap',
         padding: 5,
-        backgroundColor: '#c1c1c1',
+        backgroundColor: '#3b5998',
     },
     column1:{
         flex:1,
         padding: 5
     },
     column2:{
-        flex:2,
+        flex:3,
         padding: 5
     },
     full:{
         width: Dimensions.get('window').width,
         alignItems: 'center',
         justifyContent:'center',
-        //padding: 5        
+        padding: 5        
     }
 })
