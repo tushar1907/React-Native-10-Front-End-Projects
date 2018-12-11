@@ -14,7 +14,8 @@ export default class Header extends Component {
 
 
         </View>
-        <Text></Text>
+        <Text style={styles.name}>Tushar Gupta</Text>
+        <Text style={styles.liner}>A Software Developer</Text>
       </View>
       </ImageBackground>
     )
@@ -32,11 +33,14 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         padding: 20,
+        backgroundColor: 'rgba(0,0,0,0.7)'
     },
     profilepiccontainer:{
         width: 180,
         height: 180,
-        
+        borderRadius: 100,
+        borderWidth: 10,
+        borderColor: 'rgba(0,0,0,0.4)'
     },
     mypic:{
         flex: 1,
@@ -44,7 +48,19 @@ const styles = StyleSheet.create({
         alignSelf: 'stretch',
         borderRadius: 90,   
         borderWidth: 3,
-        borderColor: '#fff',
+        borderColor: '#000',
+    },
+    name:{
+        marginTop: 10,
+        fontSize: 25,
+        color: '#fff',
+        fontWeight: 'bold',
+    },
+    liner:{
+        marginTop: 5,
+        color: '#fff',
+        fontSize: 20,
+        fontStyle: 'italic'
     }
 
 })
