@@ -9,6 +9,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import Header from './app/components/Header';
+import Mid from './app/components/Mid';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -23,6 +24,7 @@ export default class App extends Component<Props> {
     return (
       <View style={styles.container}>
         <Header />
+        <Mid />
       </View>
     );
   }
