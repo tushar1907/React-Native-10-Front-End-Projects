@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, Image } from 'react-native'
+import { Text, StyleSheet, View, Image,TouchableOpacity } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
 
@@ -14,8 +14,9 @@ export default class NavBar extends Component {
             source={require('./img1.jpg')}/>
 
             <View style={styles.moveright}>
-            <Icon name="search" size={27} style={styles.icons}/>
-            <Icon name="account-circle" size={27} style={styles.icons}/>
+            <TouchableOpacity><Icon name="search" size={27} style={styles.icons}/></TouchableOpacity>
+            <TouchableOpacity><Icon name="account-circle" size={27} style={styles.icons}/></TouchableOpacity>            
+           
             </View>
         </View>
       </View>
