@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View, Image,TouchableOpacity } from 'react-native'
-import Icon from 'react-native-vector-icons/MaterialIcons'
+import Icon from 'react-native-vector-icons/MaterialIcons.js'
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+
+const regular_icon_btn = (<FontAwesome5.Button name={'comments'} />);
+const solid_icon_btn = (<FontAwesome5.Button name={'comments'} solid />);
 
 
 export default class NavBar extends Component {
@@ -14,8 +18,9 @@ export default class NavBar extends Component {
             source={require('./img1.jpg')}/>
 
             <View style={styles.moveright}>
-            <TouchableOpacity><Icon name="search" size={27} style={styles.icons}/></TouchableOpacity>
-            <TouchableOpacity><Icon name="account-circle" size={27} style={styles.icons}/></TouchableOpacity>            
+            
+            <TouchableOpacity><Icon name={"search"} size={27} style={styles.icons}/></TouchableOpacity>
+            <TouchableOpacity><Icon name={"account-circle"} size={27} style={styles.icons}/></TouchableOpacity>            
            
             </View>
         </View>
