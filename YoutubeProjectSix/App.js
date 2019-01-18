@@ -32,10 +32,9 @@ export default class App extends Component<Props> {
         <Body video= {data.items[1]}/>
         <Body video= {data.items[2]}/>
         <Body video= {data.items[3]}/>
-        <Body video= {data.items[4]}/>
-        <Tabbar />
+        <Body video= {data.items[4]}/>        
         </ScrollView>
-        
+        <Tabbar />
       </View>
     );
   }
@@ -43,6 +42,7 @@ export default class App extends Component<Props> {
 
 const styles = StyleSheet.create({
   container: {    
+    flex: 1,
     backgroundColor: '#fff',
   },
   
