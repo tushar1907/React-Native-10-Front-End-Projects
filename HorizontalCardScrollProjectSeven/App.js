@@ -60,21 +60,23 @@ export default class App extends Component<Props> {
 
   render() {
     return (
-      <Header>
-          <Left>
-            <Button transparent>
-              <Icon name='arrow-back' />
-            </Button>
-          </Left>
-          <Body>
-            <Title>Header</Title>
-          </Body>
-          <Right>
-            <Button transparent>
-              <Icon name='menu' />
-            </Button>
-          </Right>
-        </Header>
+            <FlatList
+              data={this.state.data}
+              renderItem={({item: rowData}) =>{
+                return(
+                  <Card style={{height:200}}
+                  title="null"
+                  image={{url: rowData.imageUrl}}
+                  containterStyle={{padding: 0, width: 160, height: 200, marginTop:150}}>
+
+                  <Text style={{marginBottom:10}}>{rowData.title}</Text>
+
+                  </Card>
+                )
+              }
+            }
+            keyExtractor={(item, index) => index}
+            />
     );
   }
 }
