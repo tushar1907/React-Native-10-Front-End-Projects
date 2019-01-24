@@ -10,6 +10,7 @@
     "native-base": "^2.10.0",
     "react": "16.6.3",
     "react-native": "0.58.0",
+    "react-native-elements": "^0.19.1",
     "react-timer-mixin": "^0.13.4"
   },
   "devDependencies": {

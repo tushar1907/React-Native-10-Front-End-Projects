@@ -8,8 +8,37 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {FlatList, Platform, StyleSheet, Text, View} from 'react-native';
 import { Container, Header, Left, Body, Right, Button, Icon, Title } from 'native-base';
+import { Card } from 'react-native-elements'
+
+
+const data = [
+  {
+    imageUrl:"https://via.placeholder.com/160x160",
+    title:"something"
+  },
+  {
+    imageUrl:"https://via.placeholder.com/160x160",
+    title:"something two"
+  },
+  {
+    imageUrl:"https://via.placeholder.com/160x160",
+    title:"something three"
+  },
+  {
+    imageUrl:"https://via.placeholder.com/160x160",
+    title:"something four"
+  },
+  {
+    imageUrl:"https://via.placeholder.com/160x160",
+    title:"something five"
+  },
+  {
+    imageUrl:"https://via.placeholder.com/160x160",
+    title:"something six"
+  },
+];
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -20,6 +49,15 @@ const instructions = Platform.select({
 
 type Props = {};
 export default class App extends Component<Props> {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      data: data
+    };    
+  }
+
+
   render() {
     return (
       <Header>
