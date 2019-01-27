@@ -8,8 +8,9 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, ScrollView} from 'react-native';
 import CardImage from './components/CardImage';
+import FooterBadge from './components/FooterBadge';
 
 
 const instructions = Platform.select({
@@ -23,26 +24,20 @@ type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-      <CardImage />
+      <ScrollView style={styles.container}>
+      
+        
+        <CardImage />         
+        <FooterBadge />
+      </ScrollView>
+      
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    flex: 1,    
     backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  }
 });
