@@ -8,10 +8,12 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, ScrollView} from 'react-native';
+import {Platform, StyleSheet, Text, ScrollView, FlatList} from 'react-native';
 import CardImage from './components/CardImage';
 import FooterBadge from './components/FooterBadge';
 import Sidebar from './components/Sidebar';
+import { Drawer} from 'native-base';
+import { Container, Header, Left, Body, Right, Button, Icon, Title } from 'native-base';
 
 
 const instructions = Platform.select({
@@ -23,14 +25,49 @@ const instructions = Platform.select({
 
 type Props = {};
 export default class App extends Component<Props> {
-  render() {
+
+  closeDrawer = () => {
+    this.drawer._root.close()
+  }
+  openDrawer = () => {
+    this.drawer._root.open()
+  }
+
+
+  render() {    
     return (
-      <ScrollView style={styles.container}>
+      <Drawer
+        ref={(ref) => { this.drawer = ref; }}
+        content={<Sidebar navigator={this.navigator} />}
+        onClose={() => this.closeDrawer()} >
+
       
-        <Sidebar />
-        <CardImage />         
-        <FooterBadge />
-      </ScrollView>
+
+          <Container>
+            <Header>
+              <Left>
+                <Button transparent onPress={()=> this.openDrawer()}>
+                  <Icon name='menu' />
+                </Button>
+              </Left>
+              <Body>
+                <Title>Side Bar Drawer</Title>
+              </Body>
+              <Right>
+                <Button transparent>
+                  <Icon name='camera' />
+                </Button>
+              </Right>
+            </Header>
+            <FlatList data={[{key:'a'},{key:'b'},{key:'c'},{key:'d'}]}
+            renderItem={({item}) => <CardImage/>} />
+            
+          </Container>
+                  
+          <FooterBadge />
+          
+      </Drawer>
+     
       
     );
   }
