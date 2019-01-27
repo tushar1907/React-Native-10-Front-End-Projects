@@ -15,3 +15,5 @@ react-native init ToDoList
 cd ToDoList
 
 react-native run-android
+
+npm install react-timer-mixin --save
