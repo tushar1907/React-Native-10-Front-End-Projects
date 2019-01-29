@@ -39,10 +39,7 @@ export default class App extends Component<Props> {
       <Drawer
         ref={(ref) => { this.drawer = ref; }}
         content={<Sidebar navigator={this.navigator} />}
-        onClose={() => this.closeDrawer()} >
-
-      
-
+        onClose={() => this.closeDrawer()} >   
           <Container>
             <Header>
               <Left>
@@ -60,8 +57,7 @@ export default class App extends Component<Props> {
               </Right>
             </Header>
             <FlatList data={[{key:'a'},{key:'b'},{key:'c'},{key:'d'}]}
-            renderItem={({item}) => <CardImage/>} />
-            
+            renderItem={({item}) => <CardImage/>} />            
           </Container>
                   
           <FooterBadge />
