@@ -10,7 +10,7 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 npm install -g create-react-native-app
 
-react-native init ToDoList 
+react-native init ToDoList
 
 cd ToDoList
 
