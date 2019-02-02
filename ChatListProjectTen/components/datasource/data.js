@@ -1,4 +1,4 @@
-export const user=[
+export const user=
     {
         "gender": "female",
         "name": {
@@ -51,7 +51,7 @@ export const user=[
         },
         "nat": "DK"
     }
-]
+
 export const users=[
     {
         "gender": "female",
